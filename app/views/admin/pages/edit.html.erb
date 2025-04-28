@@ -1,0 +1,22 @@
+<h1>Modifier la page "<%= @page.title %>"</h1>
+
+<%= form_with model: [:admin, @page], local: true do |f| %>
+  <div>
+    <%= f.label :title, "Titre" %><br>
+    <%= f.text_field :title %>
+  </div>
+
+  <div>
+    <%= f.label :slug %><br>
+    <%= f.text_field :slug, disabled: true %> <!-- On empêche la modif du slug -->
+  </div>
+
+  <div>
+    <%= f.label :content, "Contenu (HTML autorisé)" %><br>
+    <%= f.text_area :content, rows: 15 %>
+  </div>
+
+  <%= f.submit "Enregistrer les modifications" %>
+<% end %>
+
+<%= link_to "← Retour à la liste", admin_pages_path %>

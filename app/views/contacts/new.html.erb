@@ -1,0 +1,46 @@
+<div class="min-h-screen bg-cover bg-center flex items-center justify-center px-4 py-12"
+    style="background-image: url(<%= asset_path('peinture-fond.jpg') %>)">
+  <div class="bg-white bg-opacity-80 rounded-xl shadow-2xl max-w-xl w-full p-8 space-y-6 text-center">
+
+    <%= image_tag "logomaman.png", class: "mx-auto h-16" %>
+
+    <p class="text-sm text-gray-700 leading-tight">
+      <strong>Granjon Frédérique</strong><br>
+      11–13 rue Curie<br>
+      69006 LYON
+    </p>
+
+    <h1 class="text-2xl font-semibold text-indigo-800">Nous écrire</h1>
+
+    <%= form_with model: @contact, url: contacts_path, local: true, class: "space-y-4 text-left" do |f| %>
+      <div>
+        <%= f.label :name, "Votre Nom", class: "block text-gray-700 font-medium" %>
+        <%= f.text_field :name, class: "w-full rounded-md border border-gray-300 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500" %>
+      </div>
+
+      <div>
+        <%= f.label :firstname, "Votre Prénom", class: "block text-gray-700 font-medium" %>
+        <%= f.text_field :firstname, class: "w-full rounded-md border border-gray-300 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500" %>
+      </div>
+
+      <div>
+        <%= f.label :email, "Votre e-mail", class: "block text-gray-700 font-medium" %>
+        <%= f.email_field :email, class: "w-full rounded-md border border-gray-300 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500" %>
+      </div>
+
+      <div>
+        <%= f.label :subject, "Sujet", class: "block text-gray-700 font-medium" %>
+        <%= f.text_field :subject, class: "w-full rounded-md border border-gray-300 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500" %>
+      </div>
+
+      <div>
+        <%= f.label :message, "Votre message", class: "block text-gray-700 font-medium" %>
+        <%= f.text_area :message, rows: 4, class: "w-full rounded-md border border-gray-300 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500" %>
+      </div>
+
+      <div class="text-center pt-4">
+        <%= f.submit "Envoyer", class: "bg-green-600 text-white font-semibold py-2 px-6 rounded hover:bg-green-700 shadow-md transition" %>
+      </div>
+    <% end %>
+  </div>
+</div>

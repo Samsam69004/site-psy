@@ -1,0 +1,7 @@
+<p><strong>Nom :</strong> <%= @contact.name %></p>
+<p><strong>Prénom :</strong> <%= @contact.firstname %></p>
+<p><strong>Email :</strong> <%= @contact.email %></p>
+<p><strong>Sujet :</strong> <%= @contact.subject %></p>
+<p><strong>Message :</strong></p>
+<p><%= simple_format(@contact.message) %></p>
+

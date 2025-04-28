@@ -1,0 +1,12 @@
+fr:
+  active_admin:
+    dashboard: "Tableau de bord"
+    new_model: "Ajouter %{model}"
+    edit_model: "Modifier %{model}"
+    delete_model: "Supprimer %{model}"
+    view_model: "Voir %{model}"
+    save: "Enregistrer"
+    cancel: "Annuler"
+    logout: "Déconnexion"
+    login: "Connexion"
+    site_title: "Site Psy"
