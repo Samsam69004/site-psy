@@ -1,3 +1,5 @@
+@import "./actiontext.css";
+
 /* === Décalage haut pour la navbar fixe === */
 .pt-navbar-offset {
   padding-top: 160px;

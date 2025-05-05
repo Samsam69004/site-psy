@@ -1,11 +1,22 @@
+/** @type {import('tailwindcss').Config} */
 module.exports = {
-  purge: [],
-  darkMode: false, // or 'media' or 'class'
+  content: [
+    "./app/views/**/*.{html,erb}",
+    "./app/javascript/**/*.{js,ts}",
+    "./app/helpers/**/*.rb"
+  ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        sans: ['Lora', 'serif'],
+        serif: ['"Playfair Display"', 'serif']
+      },
+      colors: {
+        green: {
+          600: "#166534"
+        }
+      }
+    }
   },
-  variants: {
-    extend: {},
-  },
-  plugins: [],
+  plugins: [require("tailwindcss-animate")]
 }

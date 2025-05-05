@@ -1,6 +1,3 @@
-// app/javascript/application.js
-import "../assets/stylesheets/application.tailwind.css"
-
 // Import des modules Rails / Stimulus
 import "@hotwired/turbo-rails"
 import "./controllers"
