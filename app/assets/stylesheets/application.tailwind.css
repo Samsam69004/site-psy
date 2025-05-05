@@ -1,3 +1,4 @@
+@import "./actiontext.css";
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -25,5 +26,3 @@
     animation: fade-in 0.6s ease-out both;
   }
 }
-
-@import 'actiontext.css';
