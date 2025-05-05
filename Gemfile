@@ -20,7 +20,7 @@ gem "actiontext"
 gem "securerandom", "~> 0.4.1", require: false
 gem "bootsnap", require: false
 
-gem "dotenv-rails", groups: [:development, :test]
+gem "dotenv-rails", groups: [ :development, :test ]
 gem "tzinfo-data", platforms: %i[windows jruby]
 
 group :development, :test do
