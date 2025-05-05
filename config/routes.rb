@@ -3,8 +3,7 @@ Rails.application.routes.draw do
   ActiveAdmin.routes(self)
 
   # Envoi du formulaire de contact
-  resources :contacts, only: [:new, :create]
-
+  resources :contacts, only: [ :new, :create ]
   # Accueil unique (one page dynamique)
   root to: "pages#home"
 
