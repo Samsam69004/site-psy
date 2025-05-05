@@ -1,6 +1,6 @@
-# app/controllers/pages_controller.rb
-
 class PagesController < ApplicationController
+  def home; end
+
   def contact
     if params[:name].present? && params[:email].present? && params[:message].present?
       # ici tu peux envoyer un mail par exemple
@@ -12,9 +12,7 @@ class PagesController < ApplicationController
     redirect_to root_path(anchor: "contact")
   end
 
-  def mentions_legales
-  end
+  def mentions_legales; end
 
-  def politique_confidentialite
-  end
+  def politique_confidentialite; end
 end
