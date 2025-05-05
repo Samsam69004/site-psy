@@ -3,25 +3,24 @@
   "private": true,
   "scripts": {
     "build": "esbuild app/javascript/application.js --bundle --sourcemap --outdir=app/assets/builds",
-    "build:css": "npx tailwindcss -i ./app/assets/stylesheets/application.tailwind.css -o ./app/assets/builds/application.css --minify",
+    "build:css": "tailwindcss -i ./app/assets/stylesheets/application.tailwind.css -o ./app/assets/builds/application.css --minify",
     "watch": "esbuild app/javascript/application.js --bundle --sourcemap --outdir=app/assets/builds --watch",
-    "watch:css": "npx tailwindcss -i ./app/assets/stylesheets/application.tailwind.css -o ./app/assets/builds/application.css --watch"
+    "watch:css": "tailwindcss -i ./app/assets/stylesheets/application.tailwind.css -o ./app/assets/builds/application.css --watch"
   },
   "devDependencies": {
-    "@tailwindcss/cli": "^4.1.4",
     "@tailwindcss/forms": "^0.5.3",
     "autoprefixer": "^10.4.21",
     "esbuild": "^0.25.3",
     "eslint": "^9.26.0",
     "postcss": "^8.5.3",
-    "tailwindcss": "^4.1.4"
+    "tailwindcss": "^3.4.17"
   },
-  "packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e",
   "dependencies": {
     "@hotwired/stimulus": "^3.2.2",
     "@hotwired/turbo-rails": "^8.0.13",
     "@rails/actiontext": "^8.0.200",
     "aos": "^2.3.4",
+    "tailwindcss-animate": "^1.0.7",
     "trix": "^2.1.14"
   }
 }
