@@ -1,8 +1,6 @@
 # app/controllers/pages_controller.rb
 
 class PagesController < ApplicationController
-
-
   def contact
     if params[:name].present? && params[:email].present? && params[:message].present?
       # ici tu peux envoyer un mail par exemple

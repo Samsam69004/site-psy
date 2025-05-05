@@ -72,9 +72,41 @@ body.active_admin {
       text-decoration: underline;
     }
   }
-  
+
   body.active_admin {
     background-color: hotpink !important;
   }
 
+}
+
+form.inputs {
+  @apply bg-white rounded-lg shadow p-6 space-y-4;
+
+  label {
+    @apply block text-sm font-semibold text-gray-700;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="url"],
+  textarea,
+  select {
+    @apply block w-full mt-1 border border-gray-300 rounded-md p-2 focus:ring-2 focus:ring-green-600 focus:outline-none;
+  }
+
+  .trix-content {
+    @apply min-h-[200px] bg-white border border-gray-300 rounded-md p-4;
+}
+
+  .trix-editor {
+    @apply bg-white border border-gray-300 rounded-md p-2 mt-1 focus:outline-none focus:ring-2 focus:ring-green-600;
+}
+}
+
+form.actions {
+  @apply mt-4;
+
+  input[type="submit"] {
+    @apply bg-green-600 text-white font-bold py-2 px-6 rounded hover:bg-green-700 transition;
+  }
 }

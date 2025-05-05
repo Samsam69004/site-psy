@@ -3,4 +3,3 @@ class Page < ApplicationRecord
   validates :slug, uniqueness: true
   has_rich_text :content
 end
-

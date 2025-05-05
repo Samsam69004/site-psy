@@ -8,3 +8,5 @@ pin_all_from "app/javascript/controllers", under: "controllers"
 pin "aos" # @2.3.4
 pin "application", preload: true
 
+pin "trix"
+pin "@rails/actiontext", to: "actiontext.esm.js"

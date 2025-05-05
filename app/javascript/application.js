@@ -25,3 +25,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }, 5000)
   }
 })
+
+import "trix"
+import "@rails/actiontext"
