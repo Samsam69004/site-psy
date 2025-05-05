@@ -1,27 +1,26 @@
 <!-- SECTION ACCUEIL AVEC PHOTO DE MAMAN -->
-<%= render "shared/frange", image: "frange_1.jpg", position: "30%" %>
 
-<section class="py-16 px-4 bg-gradient-to-b from-[#f9f9f6] to-white text-center" data-aos="fade-up">
-  <h1 class="font-title text-3xl md:text-4xl font-bold text-green-600 uppercase mb-6 relative after:block after:h-1 after:w-16 after:bg-green-600 after:mx-auto after:mt-2">
-    Bienvenue, je suis Frédérique Granjon
-  </h1>
+<section style="padding-top: 160px;" class="bg-gradient-to-b from-[#f9f9f6] to-white text-center" data-aos="fade-up">
+  <div class="px-4 pb-16">
 
-  <%= image_tag "granjon.jpg",
-        alt: "Portrait de Frédérique Granjon",
-        title: "Frédérique Granjon, psychothérapeute",
-        class: "w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 lg:w-64 lg:h-64 mx-auto rounded-full border-2 border-green-600 shadow-md object-cover transform transition duration-500 hover:scale-105 mb-4" %>
+    <h1 class="font-serif text-3xl md:text-4xl font-bold text-green-600 uppercase mb-6">
+      Bienvenue, je suis Frédérique Granjon
+    </h1>
 
-  <div class="max-w-4xl mx-auto">
-    <p class="font-body text-green-800 text-center text-base sm:text-lg leading-relaxed">
-      Je vous accompagne vers un mieux-être, à travers une méthode fondée sur l’ <strong>Analyse Psycho Somato Énergétique (APsySE)</strong>,
-      alliant écoute du corps et libération des émotions.
-    </p>
+    <%= image_tag "granjon.jpg",
+      alt: "Portrait de Frédérique Granjon",
+      title: "Frédérique Granjon, psychothérapeute",
+      class: "w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 lg:w-64 lg:h-64 mx-auto rounded-full shadow-md object-cover transition duration-300 ease-in-out hover:scale-105 hover:shadow-lg" %>
+
+
+    <div class="max-w-4xl mx-auto mt-6">
+      <p class="font-sans text-green-800 text-base sm:text-lg leading-relaxed">
+        Je vous accompagne vers un mieux-être, à travers une méthode fondée sur l’<strong>Analyse Psycho Somato Énergétique (APsySE)</strong>,
+        alliant écoute du corps et libération des émotions.
+      </p>
+    </div>
   </div>
 </section>
-
-<div class="shadow-inner">
-  <%= render "shared/frange", image: "frange_2.jpg", position: "60%" %>
-</div>
 
 
 <!-- SECTION MON PARCOURS -->

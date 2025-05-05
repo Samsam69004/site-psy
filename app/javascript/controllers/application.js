@@ -1,7 +1,6 @@
 import { Application } from "@hotwired/stimulus"
 import AOS from 'aos'
 import 'aos/dist/aos.css'
-import "../libraries/aos"
 
 const application = Application.start()
 

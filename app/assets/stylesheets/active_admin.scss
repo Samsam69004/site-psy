@@ -37,3 +37,44 @@ body.active_admin {
     }
   }
 }
+
+.index_table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+
+  th {
+    background-color: #004d40;
+    color: white;
+    padding: 10px;
+    text-align: left;
+    font-weight: bold;
+  }
+
+  td {
+    padding: 10px;
+    border-bottom: 1px solid #e0e0e0;
+  }
+
+  tr:nth-child(even) {
+    background-color: #f0fdfa;
+  }
+
+  tr:hover {
+    background-color: #d2ede5;
+  }
+
+  a {
+    color: #00796b;
+    font-weight: bold;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  
+  body.active_admin {
+    background-color: hotpink !important;
+  }
+
+}
