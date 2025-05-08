@@ -8,13 +8,15 @@
     <%= csp_meta_tag %>
 
     <!-- Tailwind CSS -->
-    <%= stylesheet_link_tag "application", "data-turbo-track": "reload", media: "all", "href": asset_path("application.css") %>
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload", media: "all" %>
     <%= javascript_include_tag "application", "data-turbo-track": "reload", type: "module" %>
 
     <!-- Google Fonts -->
-    <%= stylesheet_link_tag "https://fonts.googleapis.com/css2?family=Lora&family=Playfair+Display:wght@600&display=swap", rel: "stylesheet" %>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Source+Serif+Pro:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 
-    <!-- AOS (Animate On Scroll) -->
+    <!-- AOS -->
     <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
 
@@ -24,97 +26,80 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <%= favicon_link_tag 'favicon.ico' %>
     <%= tag.link rel: "manifest", href: "/site.webmanifest" %>
-
-    <!-- Init AOS -->
-    <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        AOS.init({ duration: 800, once: true });
-      });
-    </script>
   </head>
 
-  <body class="bg-white text-gray-800">
-    <!-- Navbar -->
-    <header class="fixed top-0 left-0 w-full z-50 bg-green-600 shadow-md text-white">
-      <div class="max-w-7xl mx-auto flex justify-between items-center px-4 py-3">
-        <!-- Logo -->
-        <%= image_tag "logomaman.png", alt: "Logo ApsySE", class: "h-10 w-auto" %>
+  <body class="relative text-gray-800">
+    <!-- Image de fond discrète -->
+    <div class="absolute inset-0 z-0 bg-no-repeat bg-cover" style="background-image: url('<%= image_path("papier-peint.jpg") %>'); opacity: 0.03;"></div>
 
-        <!-- Navbar Links -->
-        <nav class="space-x-6 text-white text-lg">
-          <%= link_to "ACCUEIL", root_path, class: "hover:underline transition duration-200" %>
-          <%= link_to "PARCOURS", root_path(anchor: "parcours"), class: "hover:underline transition duration-200" %>
-          <%= link_to "OUTILS", root_path(anchor: "outils"), class: "hover:underline transition duration-200" %>
-          <%= link_to "LE CABINET", root_path(anchor: "cabinet"), class: "hover:underline transition duration-200" %>
-          <%= link_to "CE QUE JE PROPOSE", root_path(anchor: "cequejepropose"), class: "hover:underline transition duration-200" %>
-          <%= link_to "CONTACT", root_path(anchor: "contact"), class: "hover:underline transition duration-200" %>
-        </nav>
+    <!-- Contenu principal -->
+    <main class="relative z-10">
+      <!-- Navbar -->
+      <header class="fixed top-0 left-0 w-full z-50 bg-green-600 shadow-md text-white">
+        <div class="max-w-7xl mx-auto flex justify-between items-center px-4 py-3">
+          <%= image_tag "logomaman.png", alt: "Logo ApsySE", class: "h-10 w-auto" %>
+          <nav class="space-x-6 text-white text-lg">
+            <%= link_to "ACCUEIL", root_path(anchor: "accueil"), class: "relative pb-1 text-white hover:text-white transition duration-300 after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-white after:transition-all after:duration-300 hover:after:w-full" %>
+            <%= link_to "PARCOURS", root_path(anchor: "parcours"), class: "relative pb-1 text-white hover:text-white transition duration-300 after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-white after:transition-all after:duration-300 hover:after:w-full" %>
+            <%= link_to "OUTILS", root_path(anchor: "outils"), class: "relative pb-1 text-white hover:text-white transition duration-300 after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-white after:transition-all after:duration-300 hover:after:w-full" %>
+            <%= link_to "LE CABINET", root_path(anchor: "cabinet"), class: "relative pb-1 text-white hover:text-white transition duration-300 after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-white after:transition-all after:duration-300 hover:after:w-full" %>
+            <%= link_to "CE QUE JE PROPOSE", root_path(anchor: "cequejepropose"), class: "relative pb-1 text-white hover:text-white transition duration-300 after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-white after:transition-all after:duration-300 hover:after:w-full" %>
+            <%= link_to "CONTACT", root_path(anchor: "contact"), class: "relative pb-1 text-white hover:text-white transition duration-300 after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-white after:transition-all after:duration-300 hover:after:w-full" %>
+          </nav>
+        </div>
+      </header>
+
+      <!-- Main content -->
+      <div class="pt-24">
+        <%= yield %>
       </div>
-    </header>
 
-    <!-- Main Content -->
-    <main class="pt-24">
-      <%= yield %>
-    </main>
+      <!-- Flash messages -->
+      <% if notice %>
+        <div class="flash-notice text-white bg-green-500 py-2 text-center">
+          <%= notice %>
+        </div>
+      <% end %>
 
-    <!-- Flash messages -->
-    <% if notice %>
-      <p class="flash-notice text-center text-white bg-green-500 py-2"><%= notice %></p>
-    <% end %>
-    <% if alert %>
-      <p class="alert text-center text-white bg-red-500 py-2"><%= alert %></p>
-    <% end %>
+      <% if alert %>
+        <div id="flash-alert" class="text-white bg-red-500 py-2 text-center">
+          <%= alert %>
+        </div>
+      <% end %>
 
-    <!-- Flash auto-dismiss -->
-    <script>
-      document.addEventListener("turbo:load", () => {
-        const flash = document.querySelector(".flash-notice");
-        if (flash) {
-          setTimeout(() => {
-            flash.style.transition = "opacity 0.8s ease-out";
-            flash.style.opacity = "0";
-            setTimeout(() => flash.remove(), 800);
-          }, 4000);
-        }
-      });
-    </script>
+      <!-- Footer -->
+      <footer class="bg-white border-t border-gray-200 text-center text-sm text-green-800 py-6 shadow-inner">
+        <p class="mb-1">
+          Site réalisé par
+          <a href="https://www.linkedin.com/in/sami-chabane-085881151/" target="_blank" rel="noopener" class="text-green-600 font-semibold hover:underline">
+            Sami Chabane
+          </a> — Développeur web full stack 💻
+        </p>
+        <p class="mb-1">&copy; <%= Time.current.year %> Frédérique Granjon — Tous droits réservés.</p>
+        <p class="mb-1">SIRET : <span class="font-semibold">81917677700012</span></p>
+        <div class="space-x-4 mt-2">
+          <%= link_to "Mentions légales", mentions_legales_path, class: "underline hover:text-green-600" %>
+          <%= link_to "Politique de confidentialité", politique_confidentialite_path, class: "underline hover:text-green-600" %>
+        </div>
+      </footer>
 
-    <!-- Footer -->
-    <footer class="bg-white border-t border-gray-200 text-center text-sm text-green-800 py-6 shadow-inner">
-      <p class="mb-1">
-        Site réalisé par
-        <a href="https://www.linkedin.com/in/sami-chabane-085881151/" target="_blank" rel="noopener" class="text-green-600 font-semibold hover:underline">
-          Sami Chabane
-        </a> — Développeur web full stack 💻
-      </p>
-      <p class="mb-1">&copy; <%= Time.current.year %> Frédérique Granjon — Tous droits réservés.</p>
-      <p class="mb-1">SIRET : <span class="font-semibold">81917677700012</span></p>
-      <div class="space-x-4 mt-2">
-        <%= link_to "Mentions légales", mentions_legales_path, class: "underline hover:text-green-600" %>
-        <%= link_to "Politique de confidentialité", politique_confidentialite_path, class: "underline hover:text-green-600" %>
-      </div>
-    </footer>
+      <!-- Bouton retour haut -->
+      <button id="backToTop"
+              class="fixed bottom-6 right-6 z-50 hidden bg-green-600 text-white px-4 py-3 rounded-full shadow-lg hover:bg-green-700 transition duration-300 text-sm sm:text-base flex items-center gap-2"
+              onclick="window.scrollTo({ top: 0, behavior: 'smooth' })"
+              title="Retour en haut">
+        <span>🔝</span>
+        <span class="hidden sm:inline">Haut</span>
+      </button>
 
-    <!-- Bouton retour haut -->
-    <button id="backToTop"
-            class="fixed bottom-6 right-6 z-50 hidden bg-green-600 text-white px-4 py-3 rounded-full shadow-lg hover:bg-green-700 transition duration-300 text-sm sm:text-base flex items-center gap-2"
-            onclick="window.scrollTo({ top: 0, behavior: 'smooth' })"
-            title="Retour en haut">
-      <span>🔝</span>
-      <span class="hidden sm:inline">Haut</span>
-    </button>
-
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const btn = document.getElementById("backToTop");
-        window.addEventListener("scroll", function () {
-          if (window.scrollY > 300) {
-            btn.classList.remove("hidden");
-          } else {
-            btn.classList.add("hidden");
-          }
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          const btn = document.getElementById("backToTop");
+          window.addEventListener("scroll", function () {
+            btn.classList.toggle("hidden", window.scrollY < 300);
+          });
         });
-      });
-    </script>
+      </script>
+    </main>
   </body>
 </html>

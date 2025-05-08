@@ -9,7 +9,6 @@
     "watch:css": "tailwindcss -i ./app/assets/stylesheets/application.tailwind.css -o ./app/assets/builds/application.css --watch",
     "ci:build": "npm run build"
   },
-
   "devDependencies": {
     "@tailwindcss/forms": "^0.5.3",
     "autoprefixer": "^10.4.21",
@@ -23,6 +22,7 @@
     "@hotwired/turbo-rails": "^8.0.13",
     "@rails/actiontext": "^8.0.200",
     "aos": "^2.3.4",
+    "canvas-confetti": "^1.9.3",
     "tailwindcss-animate": "^1.0.7",
     "trix": "^2.1.14"
   },

@@ -27,3 +27,12 @@ h1, h2 {
 .scroll-section {
   scroll-margin-top: 6rem; /* ou ajuste à la hauteur réelle de ta navbar */
 }
+
+/* Transitions flash */
+.flash-notice {
+  transition: opacity 0.8s ease-out;
+}
+
+.flash-alert {
+  transition: opacity 0.8s ease-out;
+}

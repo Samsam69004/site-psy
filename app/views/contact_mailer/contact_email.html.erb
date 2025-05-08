@@ -1,7 +1,18 @@
-<p><strong>Nom :</strong> <%= @contact.name %></p>
-<p><strong>Prénom :</strong> <%= @contact.firstname %></p>
-<p><strong>Email :</strong> <%= @contact.email %></p>
-<p><strong>Sujet :</strong> <%= @contact.subject %></p>
-<p><strong>Message :</strong></p>
-<p><%= simple_format(@contact.message) %></p>
+<h2 style="color:#14532d;">📬 Nouveau message via le formulaire de contact</h2>
 
+<hr style="margin: 1rem 0;" />
+
+<p><strong>👤 Nom :</strong> <%= @firstname %> <%= @name %></p>
+<p><strong>📧 Email :</strong> <%= @email %></p>
+<p><strong>📝 Sujet :</strong> <%= @subject %></p>
+
+<hr style="margin: 1rem 0;" />
+
+<p><strong>💬 Message :</strong></p>
+<div style="padding: 0.5rem; background-color: #f9f9f9; border-left: 4px solid #16a34a;">
+  <%= simple_format(@message) %>
+</div>
+
+<hr style="margin: 2rem 0;" />
+
+<p style="font-size: 0.85rem; color: #888;">Message envoyé depuis le site APsySE</p>

@@ -1,9 +1,5 @@
-import { application } from "./application"
+import { Application } from "@hotwired/stimulus"
+import HelloController from "./hello_controller"
 
-const context = require.context(".", true, /\.controller\.js$/)
-context.keys().forEach((filename) => {
-  const controllerModule = context(filename)
-  if (controllerModule.default) {
-    application.register(controllerModule.default.name, controllerModule.default)
-  }
-})
+const application = Application.start()
+application.register("hello", HelloController)

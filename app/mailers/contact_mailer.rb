@@ -1,12 +1,14 @@
-
 class ContactMailer < ApplicationMailer
-  def contact_email(contact)
-    @contact = contact
+  def contact_email(name:, firstname:, email:, subject:, message:)
+    @name = name
+    @firstname = firstname
+    @message = message
+
     mail(
-  from: ENV["GMAIL_USERNAME"], # ou hardcoded 'granjonfrederique@gmail.com'
-  to: "granjonfrederique@gmail.com",
-  subject: "[APsySE] Message de #{@contact.firstname} #{@contact.name}",
-  reply_to: @contact.email
-)
+      from: ENV["GMAIL_USERNAME"], # ou 'granjonfrederique@gmail.com'
+      to: "granjonfrederique@gmail.com",
+      subject: "[APsySE] Message de #{@firstname} #{@name} : #{subject}",
+      reply_to: email
+    )
   end
 end
