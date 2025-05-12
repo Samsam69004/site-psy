@@ -1,31 +1,25 @@
 <!-- SECTION ACCUEIL AVEC PHOTO DE MAMAN -->
+<section id="accueil" class="min-h-screen flex flex-col justify-center items-center px-4 text-center text-green-900 text-lg leading-relaxed" data-aos="fade-up">
+  <h1 class="text-3xl md:text-4xl font-bold text-green-600 uppercase mb-4 relative after:block after:h-1 after:w-16 after:bg-green-600 after:mx-auto after:mt-2">
+    Bienvenue, je suis Frédérique Granjon
+  </h1>
 
-<section style="padding-top: 160px;" class="bg-gradient-to-b from-white to-white text-center" data-aos="fade-up">
-  <div class="px-4 pb-16">
-
-    <h1 class="text-3xl md:text-4xl font-bold text-green-600 uppercase mb-6 relative after:block after:h-1 after:w-16 after:bg-green-600 after:mx-auto after:mt-2">
-      Bienvenue, je suis Frédérique Granjon
-    </h1>
-
-    <%= image_tag "granjon.jpg",
+  <%= image_tag "granjon.jpg",
       alt: "Portrait de Frédérique Granjon",
       title: "Frédérique Granjon, psychothérapeute",
       class: "w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 lg:w-64 lg:h-64 mx-auto rounded-full shadow-md object-cover transition duration-300 ease-in-out hover:scale-105 hover:shadow-lg" %>
 
-
-    <div class="max-w-4xl mx-auto mt-6">
-      <p class="font-sans text-green-800 text-base sm:text-lg leading-relaxed">
-        Je vous accompagne vers un mieux-être, à travers une méthode fondée sur l’<strong>Analyse Psycho Somato Énergétique (APsySE)</strong>,
-        alliant écoute du corps et libération des émotions.
-      </p>
-    </div>
-  </div>
+  <p class="max-w-2xl mx-auto text-green-900 text-xl md:text-2xl leading-relaxed">
+    Je vous accompagne vers un mieux-être, à travers une méthode fondée sur
+    <strong class="font-semibold">l’Analyse Psycho Somato Énergétique (APsySE)</strong>,
+    alliant écoute du corps et libération des émotions.
+  </p>
 </section>
 
 
 <!-- SECTION MON PARCOURS -->
 <section id="parcours" class="py-16 px-4 bg-white" data-aos="fade-up">
-  <h2 class="text-3xl md:text-4xl font-serif font-bold text-green-600 uppercase text-center mb-6 relative after:block after:h-1 after:w-16 after:bg-green-600 after:mx-auto after:mt-2">
+  <h2 class="text-3xl md:text-4xl font-bold text-green-600 uppercase text-center mb-6 relative after:block after:h-1 after:w-16 after:bg-green-600 after:mx-auto after:mt-2">
     Mon parcours
   </h2>
   <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center bg-white border border-gray-200 p-6 rounded-lg shadow-md">
@@ -71,11 +65,11 @@
 
 <!-- SECTION OUTILS -->
 <section id="outils" class="py-16 px-4 bg-white" data-aos="fade-up">
-  <h2 class="text-3xl md:text-4xl font-serif font-bold text-green-600 uppercase text-center mb-6 relative after:block after:h-1 after:w-16 after:bg-green-600 after:mx-auto after:mt-2">
+  <h2 class="text-3xl md:text-4xl font-bold text-green-600 uppercase text-center mb-6 relative after:block after:h-1 after:w-16 after:bg-green-600 after:mx-auto after:mt-2">
     Les outils
   </h2>
 
-  <h3 class="text-2xl md:text-3xl font-serif font-bold text-green-600 uppercase text-center mb-8 relative after:block after:h-1 after:w-12 after:bg-green-600 after:mx-auto after:mt-2">
+  <h3 class="text-2xl md:text-3xl font-bold text-green-600 uppercase text-center mb-8 relative after:block after:h-1 after:w-12 after:bg-green-600 after:mx-auto after:mt-2">
     Les 7 anneaux de Wilhelm Reich
   </h3>
 
@@ -152,7 +146,7 @@
 <!-- SECTION LE CABINET -->
 <section id="cabinet" class="py-16 px-4 bg-white text-center" data-aos="fade-up">
   <div class="max-w-6xl mx-auto">
-    <h2 class="font-title text-3xl md:text-4xl font-serif font-bold text-green-600 uppercase mb-6 text-center relative after:block after:h-1 after:w-16 after:bg-green-600 after:mx-auto after:mt-2">
+    <h2 class="font-title text-3xl md:text-4xl font-bold text-green-600 uppercase mb-6 text-center relative after:block after:h-1 after:w-16 after:bg-green-600 after:mx-auto after:mt-2">
       Le cabinet
     </h2>
 
@@ -183,7 +177,7 @@
 
 <!-- SECTION CE QUE JE PROPOSE -->
 <section id="cequejepropose" class="py-20 px-4 bg-white" data-aos="fade-up">
-  <h2 class="font-title text-3xl md:text-4xl font-serif font-bold text-green-600 uppercase mb-10 text-center relative after:block after:h-1 after:w-16 after:bg-green-600 after:mx-auto after:mt-2">
+  <h2 class="font-title text-3xl md:text-4xl font-bold text-green-600 uppercase mb-10 text-center relative after:block after:h-1 after:w-16 after:bg-green-600 after:mx-auto after:mt-2">
     Ce que je propose
   </h2>
 
@@ -210,13 +204,60 @@
 <div class="shadow-inner">
   <%= render "shared/frange", image: "frange_1.jpg", position: "50%" %>
 </div>
+<section id="avis" class="py-20 px-4 bg-[#f9f9f6]" data-aos="fade-up">
+  <div class="max-w-4xl mx-auto text-center">
+    <h2 class="text-3xl md:text-4xl font-bold text-green-600 uppercase mb-10 relative after:block after:h-1 after:w-16 after:bg-green-600 after:mx-auto after:mt-2">
+      Avis & recommandations
+    </h2>
+
+    <div class="space-y-10 text-left">
+      <%# ---- AVIS RÉCENTS ---- %>
+      <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-md">
+        <p class="text-green-800 font-semibold">Armelle ✔️ Patient vérifié <span class="text-sm text-gray-500 float-right">07 Janvier 2025</span></p>
+        <p class="text-yellow-500">★★★★★</p>
+        <p class="text-green-800 mt-2">La capacité d’écoute et le professionnalisme de Frédérique Granjon alliés à une technique faisant parler le corps m’ont menée à la rencontre de moi-même. Le travail en individuel additionné au travail en groupe co-animé par Mme Granjon a conduit à un résultat remarquable et profond. L’ancrage est plus fort chaque jour. Merci</p>
+      </div>
+
+      <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-md">
+        <p class="text-green-800 font-semibold">Nassera ✔️ Patient vérifié  <span class="text-sm text-gray-500 float-right">27 Septembre 2024</span></p>
+        <p class="text-yellow-500">★★★★★</p>
+        <p class="text-green-800 mt-2">La thérapie effectuée avec Frédérique granjon m a été très bénéfique ,elle a su me mettre à l’aise , j ai grâce à sa thérapie réussi à faire la paix avec moi même et les autres , la thérapie corporelle aidant beaucoup , je suis très satisfaite des résultats. Je recommande vivement</p>
+      </div>
+
+      <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-md">
+        <p class="text-green-800 font-semibold">Celia ✔️ Patient vérifié <span class="text-sm text-gray-500 float-right">27 Septembre 2024</span></p>
+        <p class="text-yellow-500">★★★★★</p>
+        <p class="text-green-800 mt-2">Madame Granjon est une professionnelle d’une grande douceur.<br>J’ai appréciée sa bienveillance et son travail d’écoute profonde.<br><br>Je la recommande les yeux fermés.</p>
+      </div>
+
+      <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-md">
+        <p class="text-green-800 font-semibold">Flore ✔️ Patient vérifié<span class="text-sm text-gray-500 float-right">07 Juin 2023</span></p>
+        <p class="text-yellow-500">★★★★★</p>
+        <p class="text-green-800 mt-2">J'ai beaucoup apprécié l'accompagnement de Madame Granjon. Ce travail d'écoute profonde, d'analyse alliée au travail dans le corps m'a permis de sentir ce qui était bloqué en moi depuis longtemps et de le transformer. Aujourd'hui ma vie est plus simple et joyeuse.<br>Merci Madame Granjon</p>
+      </div>
+    </div>
+
+    <div class="mt-10">
+      <a href="https://www.psychologue.net/cabinets/frederique-granjon" target="_blank" rel="noopener"
+        class="inline-block text-green-600 font-semibold underline hover:text-green-800 transition">
+        Voir tous les avis sur Psychologue.net →
+      </a>
+    </div>
+  </div>
+</section>
+
+<div class="shadow-inner">
+  <%= render "shared/frange", image: "frange_2.jpg", position: "60%" %>
+</div>
+
+
 
 
 
 <!-- SECTION ME CONTACTER -->
 <section id="contact" class="py-20 px-4 bg-[#f9f9f6] text-center" data-aos="fade-up">
   <div class="max-w-2xl mx-auto">
-    <h2 class="font-title text-3xl md:text-4xl font-serif font-bold text-green-600 uppercase mb-6 relative after:block after:h-1 after:w-16 after:bg-green-600 after:mx-auto after:mt-2">
+    <h2 class="font-title text-3xl md:text-4xl font-bold text-green-600 uppercase mb-6 relative after:block after:h-1 after:w-16 after:bg-green-600 after:mx-auto after:mt-2">
       Me contacter
     </h2>
 
