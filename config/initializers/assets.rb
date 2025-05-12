@@ -14,4 +14,7 @@ Rails.application.config.assets.precompile += %w[ active_admin.scss ]
 
 
 Rails.application.config.assets.paths << Rails.root.join("app/assets/builds")
-Rails.application.config.assets.precompile += %w[ application.css application.js ]
+# Ne pas recompiler application.css car il est déjà généré par Tailwind
+Rails.application.config.assets.precompile += %w[ application.js ]
+Rails.application.config.assets.precompile -= %w[ application.css ]
+
