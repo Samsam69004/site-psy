@@ -6,4 +6,4 @@ Rails.application.config.assets.precompile += %w[ active_admin.css ]
 # Pour charger les fichiers générés par esbuild/tailwind
 Rails.application.config.assets.paths << Rails.root.join("app/assets/builds")
 Rails.application.config.assets.precompile += %w[ application.js ]
-Rails.application.config.assets.precompile += %w( favicon.ico )
+Rails.application.config.assets.precompile += %w[ favicon.ico ]

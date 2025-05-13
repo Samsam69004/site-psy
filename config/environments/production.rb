@@ -71,9 +71,8 @@ Rails.application.configure do
 
 
   config.middleware.insert_before(Rack::Runtime, Rack::Rewrite) do
-  r301 %r{.*}, 'https://frederiquegranjon.com$&', if: Proc.new { |rack_env|
-    rack_env['HTTP_HOST'] == 'www.frederiquegranjon.com'
+  r301 %r{.*}, "https://frederiquegranjon.com$&", if: Proc.new { |rack_env|
+    rack_env["HTTP_HOST"] == "www.frederiquegranjon.com"
   }
   end
-
 end

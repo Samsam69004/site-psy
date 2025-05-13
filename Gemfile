@@ -19,7 +19,7 @@ gem "actiontext"
 gem "securerandom", "~> 0.4.1", require: false
 gem "bootsnap", require: false
 gem "rack-rewrite"
-gem 'sitemap_generator'
+gem "sitemap_generator"
 
 
 gem "dotenv-rails", groups: [ :development, :test ]
