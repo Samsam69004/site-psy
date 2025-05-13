@@ -1,6 +1,6 @@
 <!-- SECTION ACCUEIL AVEC PHOTO DE MAMAN -->
-<section id="accueil" class="min-h-screen flex flex-col justify-center items-center px-4 text-center text-green-900 text-lg leading-relaxed" data-aos="fade-up">
-  <h1 class="text-3xl md:text-4xl font-bold text-green-600 uppercase mb-4 relative after:block after:h-1 after:w-16 after:bg-green-600 after:mx-auto after:mt-2">
+<section id="accueil" class="min-h-screen flex flex-col justify-center items-center px-4 text-center text-green-900 text-lg leading-relaxed font-sans" data-aos="fade-up">
+  <h1 class="text-3xl md:text-4xl font-bold text-green-600 uppercase mb-4 font-serif relative after:block after:h-1 after:w-16 after:bg-green-600 after:mx-auto after:mt-2">
     Bienvenue, je suis Frédérique Granjon
   </h1>
 
@@ -9,30 +9,32 @@
       title: "Frédérique Granjon, psychothérapeute",
       class: "w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 lg:w-64 lg:h-64 mx-auto rounded-full shadow-md object-cover transition duration-300 ease-in-out hover:scale-105 hover:shadow-lg" %>
 
-  <p class="max-w-2xl mx-auto text-green-900 text-xl md:text-2xl leading-relaxed">
+  <p class="max-w-2xl mx-auto text-green-900 text-xl md:text-2xl font-sans leading-relaxed">
     Je vous accompagne vers un mieux-être, à travers une méthode fondée sur
     <strong class="font-semibold">l’Analyse Psycho Somato Énergétique (APsySE)</strong>,
     alliant écoute du corps et libération des émotions.
   </p>
 </section>
 
-
+<div class="shadow-inner">
+  <%= render "shared/frange", image: "frange_2.jpg", position: "60%" %>
+</div>
 <!-- SECTION MON PARCOURS -->
-<section id="parcours" class="py-16 px-4 bg-white" data-aos="fade-up">
-  <h2 class="text-3xl md:text-4xl font-bold text-green-600 uppercase text-center mb-6 relative after:block after:h-1 after:w-16 after:bg-green-600 after:mx-auto after:mt-2">
+<section id="parcours" class="py-16 px-4 bg-white font-sans" data-aos="fade-up">
+  <h2 class="text-3xl md:text-4xl font-bold text-green-600 uppercase text-center mb-6 font-serif relative after:block after:h-1 after:w-16 after:bg-green-600 after:mx-auto after:mt-2">
     Mon parcours
   </h2>
+
   <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center bg-white border border-gray-200 p-6 rounded-lg shadow-md">
     <!-- Image de la peinture -->
     <div class="bg-white p-6 rounded-lg">
       <%= image_tag "peinture-fond.jpg",
-    alt: "Peinture artistique de Frédérique Granjon",
-    class: "w-full rounded-lg object-cover transition duration-300 transform hover:-translate-y-1 hover:shadow-xl" %>
+        alt: "Peinture artistique de Frédérique Granjon",
+        class: "w-full rounded-lg object-cover transition duration-300 transform hover:-translate-y-1 hover:shadow-xl" %>
     </div>
 
-
     <!-- Texte du parcours -->
-    <div class="h-full flex flex-col justify-between bg-white rounded-lg shadow-md p-6 transition duration-300 transform hover:-translate-y-1 hover:shadow-xl font-body text-green-800 text-base sm:text-lg leading-relaxed space-y-4">
+    <div class="h-full flex flex-col justify-between bg-white rounded-lg shadow-md p-6 font-sans text-green-800 text-base sm:text-lg leading-relaxed space-y-4 transition duration-300 transform hover:-translate-y-1 hover:shadow-xl">
       <p>
         Ayant toujours été passionnée par les relations humaines et cherché à en comprendre les mécanismes,
         j’ai moi-même fait un travail thérapeutique depuis toute jeune, tel un cheminement personnel nécessaire.
@@ -60,55 +62,37 @@
 <div class="shadow-inner">
   <%= render "shared/frange", image: "frange_3.jpg", position: "90%" %>
 </div>
-
-
-
 <!-- SECTION OUTILS -->
-<section id="outils" class="py-16 px-4 bg-white" data-aos="fade-up">
-  <h2 class="text-3xl md:text-4xl font-bold text-green-600 uppercase text-center mb-6 relative after:block after:h-1 after:w-16 after:bg-green-600 after:mx-auto after:mt-2">
+<section id="outils" class="py-16 px-4 bg-white font-sans" data-aos="fade-up">
+  <h2 class="text-3xl md:text-4xl font-bold text-green-600 uppercase text-center mb-6 font-serif relative after:block after:h-1 after:w-16 after:bg-green-600 after:mx-auto after:mt-2">
     Les outils
   </h2>
 
-  <h3 class="text-2xl md:text-3xl font-bold text-green-600 uppercase text-center mb-8 relative after:block after:h-1 after:w-12 after:bg-green-600 after:mx-auto after:mt-2">
+  <h3 class="text-2xl md:text-3xl font-bold text-green-600 uppercase text-center mb-8 font-serif relative after:block after:h-1 after:w-12 after:bg-green-600 after:mx-auto after:mt-2">
     Les 7 anneaux de Wilhelm Reich
   </h3>
 
   <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
     <!-- Image -->
-    <div class="h-full flex flex-col justify-between bg-white rounded-lg shadow-md p-6 transition duration-300 transform hover:-translate-y-1 hover:shadow-xl font-body text-green-800 text-base sm:text-lg leading-relaxed space-y-4">
-            <%= image_tag "reich.jpg", alt: "Les 7 anneaux de Wilhelm Reich", class: "w-full h-full object-cover rounded-lg shadow-md" %>
-
+    <div class="h-full flex flex-col justify-between bg-white rounded-lg shadow-md p-6 font-sans transition duration-300 transform hover:-translate-y-1 hover:shadow-xl text-green-800 text-base sm:text-lg leading-relaxed space-y-4">
+      <%= image_tag "reich.jpg", alt: "Les 7 anneaux de Wilhelm Reich", class: "w-full h-full object-cover rounded-lg shadow-md" %>
     </div>
 
     <!-- Texte -->
-    <div class="h-full flex flex-col justify-between bg-white rounded-lg shadow-md p-6 transition duration-300 transform hover:-translate-y-1 hover:shadow-xl font-body text-green-800 text-base sm:text-lg leading-relaxed space-y-4">
-      <p><strong>1er anneau – Stade oculaire</strong> – Oreilles / yeux / nez (traumatisme prénatal et natal)<br>
-        Peur et violence. Troubles dissociatifs de l’identité. Perte de contact avec le réel.
-      </p>
-      <p><strong>2ème anneau – Stade oral</strong> – Bouche / langue / nuque<br>
-        Rage, colère, dépression. Troubles de l’attachement.
-      </p>
-      <p><strong>3ème anneau – Narcissisme</strong> – Cou et nuque<br>
-        Troubles narcissiques, jalousie, rivalité, ambivalence, égocentrisme.
-      </p>
-      <p><strong>4ème anneau – Affectivité amour</strong> – Ceinture scapulaire, thorax, bras, cœur<br>
-        Fragilité du moi, peur de donner/recevoir et aimer / être aimé.
-      </p>
-      <p><strong>5ème anneau – Masochisme</strong> – Diaphragme<br>
-        Honte / haine de soi / culpabilité / pulsions suicidaires.
-      </p>
-      <p><strong>6ème anneau – Stade anal</strong> – Ventre / jambes / pieds<br>
-        Sadisme, troubles de l’analité, contrôle émotionnel.
-      </p>
-      <p><strong>7ème anneau – Stade génital</strong> – Pelvis / appareil génital<br>
-        Blocage du plaisir, difficulté à lâcher prise.
-      </p>
+    <div class="h-full flex flex-col justify-between bg-white rounded-lg shadow-md p-6 font-sans transition duration-300 transform hover:-translate-y-1 hover:shadow-xl text-green-800 text-base sm:text-lg leading-relaxed space-y-4">
+      <p><strong>1er anneau – Stade oculaire</strong> – Oreilles / yeux / nez (traumatisme prénatal et natal)<br>Peur et violence. Troubles dissociatifs de l’identité.</p>
+      <p><strong>2ème anneau – Stade oral</strong> – Bouche / langue / nuque<br>Rage, colère, dépression. Troubles de l’attachement.</p>
+      <p><strong>3ème anneau – Narcissisme</strong> – Cou et nuque<br>Jalousie, rivalité, égocentrisme.</p>
+      <p><strong>4ème anneau – Affectivité amour</strong> – Thorax, bras, cœur<br>Fragilité du moi, difficulté à aimer ou être aimé.</p>
+      <p><strong>5ème anneau – Masochisme</strong> – Diaphragme<br>Honte, culpabilité, pulsions suicidaires.</p>
+      <p><strong>6ème anneau – Stade anal</strong> – Ventre, jambes, pieds<br>Contrôle émotionnel, rigidité.</p>
+      <p><strong>7ème anneau – Stade génital</strong> – Pelvis, appareil génital<br>Blocage du plaisir, difficulté à lâcher prise.</p>
     </div>
   </div>
 
   <!-- Bloc explicatif APsySE -->
   <div class="w-full flex justify-center mt-16">
-    <div class="max-w-3xl text-center text-green-800 font-body text-base sm:text-lg leading-relaxed space-y-4 border border-gray-200 shadow-md bg-white rounded-lg p-6">
+    <div class="max-w-3xl text-center text-green-800 font-sans text-base sm:text-lg leading-relaxed space-y-4 border border-gray-200 shadow-md bg-white rounded-lg p-6">
       <p>L’APsySE est un chemin vers l’amour de soi, des autres et de la vie.</p>
       <p>Elle réactive les fonctions naturelles à travers 7 niveaux de libération :</p>
       <p>Du OUI à la vie (niveaux 1 et 2), à la capacité d'aimer (niveaux 3 à 5), jusqu’à l’ouverture orgasmique du cœur (niveaux 4 à 7).</p>
@@ -140,13 +124,10 @@
 <div class="shadow-inner">
   <%= render "shared/frange", image: "frange_4.jpg", position: "45%" %>
 </div>
-
-
-
 <!-- SECTION LE CABINET -->
-<section id="cabinet" class="py-16 px-4 bg-white text-center" data-aos="fade-up">
+<section id="cabinet" class="py-16 px-4 bg-white text-center font-sans" data-aos="fade-up">
   <div class="max-w-6xl mx-auto">
-    <h2 class="font-title text-3xl md:text-4xl font-bold text-green-600 uppercase mb-6 text-center relative after:block after:h-1 after:w-16 after:bg-green-600 after:mx-auto after:mt-2">
+    <h2 class="text-3xl md:text-4xl font-bold text-green-600 uppercase mb-6 font-serif text-center relative after:block after:h-1 after:w-16 after:bg-green-600 after:mx-auto after:mt-2">
       Le cabinet
     </h2>
 
@@ -173,45 +154,49 @@
 <div class="shadow-inner">
   <%= render "shared/frange", image: "frange_5.jpg", position: "center" %>
 </div>
-
-
 <!-- SECTION CE QUE JE PROPOSE -->
-<section id="cequejepropose" class="py-20 px-4 bg-white" data-aos="fade-up">
-  <h2 class="font-title text-3xl md:text-4xl font-bold text-green-600 uppercase mb-10 text-center relative after:block after:h-1 after:w-16 after:bg-green-600 after:mx-auto after:mt-2">
+<section id="cequejepropose" class="py-20 px-4 bg-white font-sans" data-aos="fade-up">
+  <h2 class="text-3xl md:text-4xl font-bold text-green-600 uppercase mb-10 text-center font-serif relative after:block after:h-1 after:w-16 after:bg-green-600 after:mx-auto after:mt-2">
     Ce que je propose
   </h2>
 
-  <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-3xl mx-auto">
-    <div class="bg-green-600 text-white rounded-lg p-4 shadow hover:bg-green-700 transition duration-300 flex items-center gap-4">
-      <span class="text-2xl">🧘‍♀️</span>
-      <span>Gestion des émotions et du stress</span>
+  <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-6xl mx-auto w-full">
+    <div class="bg-green-600 text-white rounded-lg px-6 py-6 shadow hover:bg-green-700 transition duration-300 flex items-center justify-center gap-4 min-h-[100px]">
+      <span class="text-3xl hover:scale-110 transition-transform">🧘‍♀️</span>
+      <span class="text-xl font-semibold text-center">Gestion des émotions et du stress</span>
     </div>
-    <div class="bg-green-600 text-white rounded-lg p-4 shadow hover:bg-green-700 transition duration-300 flex items-center gap-4">
-      <span class="text-2xl">💔</span>
-      <span>Traumatismes et blessures anciennes</span>
+    <div class="bg-green-600 text-white rounded-lg px-6 py-6 shadow hover:bg-green-700 transition duration-300 flex items-center justify-center gap-4 min-h-[100px]">
+      <span class="text-3xl hover:scale-110 transition-transform">💔</span>
+      <span class="text-xl font-semibold text-center">Traumatismes et blessures anciennes</span>
     </div>
-    <div class="bg-green-600 text-white rounded-lg p-4 shadow hover:bg-green-700 transition duration-300 flex items-center gap-4">
-      <span class="text-2xl">🔄</span>
-      <span>Accompagnement des transitions de vie</span>
+    <div class="bg-green-600 text-white rounded-lg px-6 py-6 shadow hover:bg-green-700 transition duration-300 flex items-center justify-center gap-4 min-h-[100px]">
+      <span class="text-3xl hover:scale-110 transition-transform">🔄</span>
+      <span class="text-xl font-semibold text-center">Accompagnement des transitions de vie</span>
     </div>
-    <div class="bg-green-600 text-white rounded-lg p-4 shadow hover:bg-green-700 transition duration-300 flex items-center gap-4">
-      <span class="text-2xl">🧠</span>
-      <span>Travail sur le lien au corps</span>
+    <div class="bg-green-600 text-white rounded-lg px-6 py-6 shadow hover:bg-green-700 transition duration-300 flex items-center justify-center gap-4 min-h-[100px]">
+      <span class="text-3xl hover:scale-110 transition-transform">🧠</span>
+      <span class="text-xl font-semibold text-center">Travail sur le lien au corps</span>
     </div>
+  </div>
+
+
+
+  <div class="max-w-3xl mx-auto mt-10 text-center text-green-600 font-sans text-base sm:text-lg leading-relaxed space-y-4 border border-gray-200 shadow-md bg-white rounded-lg p-6 transition duration-300 transform hover:-translate-y-1 hover:shadow-lg">
+    <p class="text-green-800">Je vous accueille en individuel au cabinet Curie ou en groupe à la Croix-Rousse.</p>
   </div>
 </section>
 
 <div class="shadow-inner">
   <%= render "shared/frange", image: "frange_1.jpg", position: "50%" %>
 </div>
-<section id="avis" class="py-20 px-4 bg-[#f9f9f6]" data-aos="fade-up">
+<!-- SECTION AVIS -->
+<section id="avis" class="py-20 px-4 bg-[#f9f9f6] font-sans" data-aos="fade-up">
   <div class="max-w-4xl mx-auto text-center">
-    <h2 class="text-3xl md:text-4xl font-bold text-green-600 uppercase mb-10 relative after:block after:h-1 after:w-16 after:bg-green-600 after:mx-auto after:mt-2">
+    <h2 class="text-3xl md:text-4xl font-bold text-green-600 uppercase mb-10 font-serif relative after:block after:h-1 after:w-16 after:bg-green-600 after:mx-auto after:mt-2">
       Avis & recommandations
     </h2>
 
     <div class="space-y-10 text-left">
-      <%# ---- AVIS RÉCENTS ---- %>
       <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-md">
         <p class="text-green-800 font-semibold">Armelle ✔️ Patient vérifié <span class="text-sm text-gray-500 float-right">07 Janvier 2025</span></p>
         <p class="text-yellow-500">★★★★★</p>
@@ -219,21 +204,21 @@
       </div>
 
       <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-md">
-        <p class="text-green-800 font-semibold">Nassera ✔️ Patient vérifié  <span class="text-sm text-gray-500 float-right">27 Septembre 2024</span></p>
+        <p class="text-green-800 font-semibold">Nassera ✔️ Patient vérifié <span class="text-sm text-gray-500 float-right">27 Septembre 2024</span></p>
         <p class="text-yellow-500">★★★★★</p>
-        <p class="text-green-800 mt-2">La thérapie effectuée avec Frédérique granjon m a été très bénéfique ,elle a su me mettre à l’aise , j ai grâce à sa thérapie réussi à faire la paix avec moi même et les autres , la thérapie corporelle aidant beaucoup , je suis très satisfaite des résultats. Je recommande vivement</p>
+        <p class="text-green-800 mt-2">La thérapie effectuée avec Frédérique Granjon m’a été très bénéfique, elle a su me mettre à l’aise. Grâce à sa thérapie, j’ai réussi à faire la paix avec moi-même et les autres. La thérapie corporelle aidant beaucoup, je suis très satisfaite des résultats. Je recommande vivement.</p>
       </div>
 
       <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-md">
         <p class="text-green-800 font-semibold">Celia ✔️ Patient vérifié <span class="text-sm text-gray-500 float-right">27 Septembre 2024</span></p>
         <p class="text-yellow-500">★★★★★</p>
-        <p class="text-green-800 mt-2">Madame Granjon est une professionnelle d’une grande douceur.<br>J’ai appréciée sa bienveillance et son travail d’écoute profonde.<br><br>Je la recommande les yeux fermés.</p>
+        <p class="text-green-800 mt-2">Madame Granjon est une professionnelle d’une grande douceur.<br>J’ai apprécié sa bienveillance et son travail d’écoute profonde.<br><br>Je la recommande les yeux fermés.</p>
       </div>
 
       <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-md">
-        <p class="text-green-800 font-semibold">Flore ✔️ Patient vérifié<span class="text-sm text-gray-500 float-right">07 Juin 2023</span></p>
+        <p class="text-green-800 font-semibold">Flore ✔️ Patient vérifié <span class="text-sm text-gray-500 float-right">07 Juin 2023</span></p>
         <p class="text-yellow-500">★★★★★</p>
-        <p class="text-green-800 mt-2">J'ai beaucoup apprécié l'accompagnement de Madame Granjon. Ce travail d'écoute profonde, d'analyse alliée au travail dans le corps m'a permis de sentir ce qui était bloqué en moi depuis longtemps et de le transformer. Aujourd'hui ma vie est plus simple et joyeuse.<br>Merci Madame Granjon</p>
+        <p class="text-green-800 mt-2">J’ai beaucoup apprécié l’accompagnement de Madame Granjon. Ce travail d’écoute profonde, d’analyse alliée au travail dans le corps m’a permis de sentir ce qui était bloqué en moi depuis longtemps et de le transformer. Aujourd’hui, ma vie est plus simple et joyeuse.<br>Merci Madame Granjon</p>
       </div>
     </div>
 
@@ -249,21 +234,16 @@
 <div class="shadow-inner">
   <%= render "shared/frange", image: "frange_2.jpg", position: "60%" %>
 </div>
-
-
-
-
-
 <!-- SECTION ME CONTACTER -->
-<section id="contact" class="py-20 px-4 bg-[#f9f9f6] text-center" data-aos="fade-up">
+<section id="contact" class="py-20 px-4 bg-[#f9f9f6] text-center font-sans" data-aos="fade-up">
   <div class="max-w-2xl mx-auto">
-    <h2 class="font-title text-3xl md:text-4xl font-bold text-green-600 uppercase mb-6 relative after:block after:h-1 after:w-16 after:bg-green-600 after:mx-auto after:mt-2">
+    <h2 class="text-3xl md:text-4xl font-bold text-green-600 uppercase mb-6 font-serif relative after:block after:h-1 after:w-16 after:bg-green-600 after:mx-auto after:mt-2">
       Me contacter
     </h2>
 
     <!-- Message -->
     <div class="bg-white border border-gray-200 shadow-sm rounded-lg p-6 mb-8">
-      <p class="font-body text-green-800 text-base sm:text-lg leading-relaxed">
+      <p class="text-green-800 text-base sm:text-lg leading-relaxed">
         Réponse rapide · Confidentialité assurée.
       </p>
     </div>
@@ -278,7 +258,6 @@
 <div class="shadow-inner">
   <%= render "shared/frange", image: "frange_5.jpg", position: "50%" %>
 </div>
-
 
 
 

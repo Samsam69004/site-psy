@@ -8,8 +8,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Inter', 'sans-serif'],
-        serif: ['"Source Serif Pro"', 'serif']
+        sans: ['Lora', 'serif'],
+        serif: ['Playfair Display', 'serif']
       },
       keyframes: {
         'fade-in': {
