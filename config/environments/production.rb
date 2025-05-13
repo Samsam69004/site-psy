@@ -1,6 +1,7 @@
 require "active_support/core_ext/integer/time"
 
 Rails.application.configure do
+  config.middleware.use Rack::Deflater
   # Code is not reloaded between requests.
   config.enable_reloading = false
 

@@ -134,21 +134,31 @@
 
     <!-- Carte Google Maps -->
     <div class="w-full h-80 md:h-96 mb-12 rounded-xl overflow-hidden shadow-md border border-gray-200" data-aos="fade-up" data-aos-delay="100">
-      <iframe class="w-full h-full"
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2783.093973188557!2d4.856784476211536!3d45.76930691302991!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47f4ea8ee56aa929%3A0x9e6e21007232b1c2!2s11-13%20Rue%20Curie%2C%2069006%20Lyon!5e0!3m2!1sfr!2sfr!4v1744624231283!5m2!1sfr!2sfr"
-        style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+      <iframe
+        class="w-full h-full"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2783.093973188557!2d4.843789376708166!3d45.770920313208204!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47f4ea6095a3656b%3A0x711f17e576ce057f!2s11-13%20Rue%20Curie%2C%2069006%20Lyon!5e0!3m2!1sfr!2sfr!4v1715178718939!5m2!1sfr!2sfr"
+        style="border:0;"
+        allowfullscreen=""
+        loading="lazy"
+        title="Localisation du cabinet au 11-13 Rue Curie, Lyon">
+      </iframe>
     </div>
 
     <!-- Galerie photos -->
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6" data-aos="fade-up" data-aos-delay="200">
-      <% ["cabinet1.jpg", "cabinet2.jpg", "cabinet3.jpg"].each do |img| %>
-        <a href="<%= image_path(img) %>" target="_blank" class="group relative overflow-hidden rounded-xl shadow-md block border border-gray-200">
+      <% ["cabinet1.jpg", "cabinet2.jpg", "cabinet3.jpg"].each_with_index do |img, index| %>
+        <a href="<%= image_path(img) %>" target="_blank"
+            aria-label="Voir la photo du cabinet numéro <%= index + 1 %>"
+            class="group relative overflow-hidden rounded-xl shadow-md block border border-gray-200">
           <div class="overflow-hidden rounded-xl">
-            <%= image_tag img, class: "object-cover w-full h-64 rounded-xl transition-transform duration-500 ease-in-out hover:scale-150 hover:z-10" %>
+            <%= image_tag img,
+              alt: "Photo du cabinet Frédérique Granjon numéro #{index + 1}",
+              class: "object-cover w-full h-64 rounded-xl transition-transform duration-500 ease-in-out hover:scale-150 hover:z-10" %>
           </div>
         </a>
       <% end %>
     </div>
+
   </div>
 </section>
 
