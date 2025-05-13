@@ -64,8 +64,11 @@ Rails.application.configure do
 
   # Autres
   config.active_support.report_deprecations = false
+  config.hosts << "/herokuapp\.com/"
+  config.hosts << "sitepsy-903c42d45526.herokuapp.com"
   config.hosts << "frederiquegranjon.com"
   config.hosts << "www.frederiquegranjon.com"
+
 
   config.middleware.insert_before(Rack::Runtime, Rack::Rewrite) do
   r301 %r{.*}, 'https://frederiquegranjon.com$&', if: Proc.new { |rack_env|
