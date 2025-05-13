@@ -23,7 +23,14 @@
     "@rails/actiontext": "^8.0.200",
     "aos": "^2.3.4",
     "canvas-confetti": "^1.9.3",
+    "core-js": "^3.42.0",
+    "regenerator-runtime": "^0.14.1",
     "tailwindcss-animate": "^1.0.7",
     "trix": "^2.1.14"
-  }
+  },
+  "browserslist": [
+    "defaults",
+    "not IE 11",
+    "maintained node versions"
+  ]
 }

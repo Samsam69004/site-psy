@@ -39,7 +39,7 @@ Rails.application.configure do
 
   # ActionMailer
   config.action_mailer.perform_caching = false
-  config.action_mailer.default_url_options = { host: "monsite.fr" }
+  config.action_mailer.default_url_options = { host: "frederiquegranjon.com", protocol: "https" }
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
     address:              "smtp.gmail.com",
@@ -64,4 +64,13 @@ Rails.application.configure do
 
   # Autres
   config.active_support.report_deprecations = false
+  config.hosts << "frederiquegranjon.com"
+  config.hosts << "www.frederiquegranjon.com"
+
+  config.middleware.insert_before(Rack::Runtime, Rack::Rewrite) do
+  r301 %r{.*}, 'https://frederiquegranjon.com$&', if: Proc.new { |rack_env|
+    rack_env['HTTP_HOST'] == 'www.frederiquegranjon.com'
+  }
+  end
+
 end

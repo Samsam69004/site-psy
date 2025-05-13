@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -16,7 +18,12 @@
 
     <!-- Tailwind CSS -->
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload", media: "all" %>
-    <%= javascript_include_tag "application", "data-turbo-track": "reload", type: "module" %>
+
+    <!-- JS Modern -->
+    <%= javascript_include_tag "application", type: "module", "data-turbo-track": "reload" %>
+
+    <!-- JS fallback pour anciens navigateurs -->
+    <%= javascript_include_tag "legacy", nomodule: true %>
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -36,10 +43,16 @@
   </head>
 
   <body class="relative text-gray-800">
-    <!-- Image de fond -->
+    <!-- Message pour navigateurs non supportés -->
+    <noscript>
+      <div style="background: #fee; color: #b00; padding: 1rem; text-align: center;">
+        Votre navigateur ne prend pas en charge JavaScript ou est trop ancien pour afficher ce site correctement.
+        Veuillez le mettre à jour pour une meilleure expérience.
+      </div>
+    </noscript>
+
     <div class="absolute inset-0 z-0 bg-no-repeat bg-cover" style="background-image: url('<%= image_path("papier-peint.jpg") %>'); opacity: 0.04;"></div>
 
-    <!-- Contenu principal -->
     <main class="relative z-10">
       <!-- Navbar -->
       <header class="fixed top-0 left-0 w-full z-50 bg-green-600 shadow-md text-white">
@@ -55,8 +68,6 @@
           </nav>
         </div>
       </header>
-
-
 
       <!-- Main content -->
       <div class="pt-24">

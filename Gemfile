@@ -18,6 +18,8 @@ gem "sassc-rails"
 gem "actiontext"
 gem "securerandom", "~> 0.4.1", require: false
 gem "bootsnap", require: false
+gem "rack-rewrite"
+
 
 gem "dotenv-rails", groups: [ :development, :test ]
 gem "tzinfo-data", platforms: %i[windows jruby]

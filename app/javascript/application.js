@@ -2,6 +2,8 @@ import "@hotwired/turbo-rails"
 import "./controllers"
 import "trix"
 import "@rails/actiontext"
+import 'core-js/stable'; // pour polyfiller les anciennes APIs
+import 'regenerator-runtime/runtime';
 
 import AOS from "aos"
 import "aos/dist/aos.css"
