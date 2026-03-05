@@ -353,7 +353,95 @@
 
     <!-- CTA bouton -->
     <%= link_to "Remplir le formulaire de contact", new_contact_path,
-      class: "inline-block bg-green-600 hover:bg-green-700 hover:scale-105 transform transition duration-300 text-white font-semibold py-3 px-6 rounded-lg shadow-md" %>
+      class: "inline-block bg-green-600 hover:bg-green-700 hover:scale-105 transform transition duration-300 text-white font-semibold py-3 px-6 rounded-lg shadow-md mb-8" %>
+
+    <!-- Liens vers profils externes -->
+    <div class="mt-8 flex flex-col items-center gap-4">
+      <p class="text-green-800 text-base sm:text-lg mb-2">Vous pouvez également me retrouver sur :</p>
+      
+      <!-- Profil Psychologue.net -->
+      <a href="https://www.psychologue.net/cabinets/frederique-granjon" target="_blank" rel="noopener"
+        class="inline-flex items-center gap-3 bg-white border border-gray-200 rounded-lg px-6 py-4 shadow-md hover:shadow-xl transition duration-300 transform hover:-translate-y-1">
+        <%= image_tag "profilpsychologuenet.png",
+          alt: "Profil Psychologue.net - Frédérique Granjon",
+          class: "h-12 object-contain" %>
+        <span class="text-green-600 font-semibold hover:text-green-800 transition">
+          Voir mon profil →
+        </span>
+      </a>
+
+      <!-- Profil Resalib -->
+      <a href="https://www.resalib.fr/praticien/37941-frederique-granjon-psychopraticien-lyon" target="_blank" rel="noopener"
+        class="inline-flex items-center gap-3 bg-white border border-gray-200 rounded-lg px-6 py-4 shadow-md hover:shadow-xl transition duration-300 transform hover:-translate-y-1">
+        <%= image_tag "profilresalib.png",
+          alt: "Profil Resalib - Frédérique Granjon",
+          class: "h-12 object-contain" %>
+        <span class="text-green-600 font-semibold hover:text-green-800 transition">
+          Voir mon profil →
+        </span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<div class="shadow-inner">
+  <%= render "shared/frange", image: "frange_3.jpg", position: "40%" %>
+</div>
+
+<!-- SECTION PARTENAIRES -->
+<section id="partenaires" class="py-20 px-4 bg-white font-sans" data-aos="fade-up">
+  <div class="max-w-6xl mx-auto">
+    
+    <h2 class="text-3xl md:text-4xl font-bold text-green-600 uppercase mb-6 text-center font-serif relative after:block after:h-1 after:w-16 after:bg-green-600 after:mx-auto after:mt-2">
+      Partenaires
+    </h2>
+
+    <p class="text-green-800 text-lg sm:text-xl leading-relaxed mb-12 max-w-4xl mx-auto text-center">
+      Je collabore avec des professionnels de confiance et des associations reconnues dans le domaine de la psychothérapie.
+    </p>
+
+    <!-- Grille des partenaires -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+      
+      <!-- Partenaire 1 : Sandrine Mundweiler -->
+      <a href="https://sandrinemundweiler.wixsite.com/sandrine-mundweile-1" target="_blank" rel="noopener"
+        class="bg-white border border-gray-200 rounded-lg p-6 shadow-md hover:shadow-xl transition duration-300 transform hover:-translate-y-1 flex flex-col items-center text-center">
+        
+        <%= image_tag "sandrine.png",
+          alt: "Sandrine Mundweiler - Psychopraticienne partenaire",
+          class: "w-32 h-32 object-contain rounded-full mb-4 shadow-md bg-white p-2" %>
+        
+        <h3 class="text-xl font-semibold text-green-600 mb-2">Sandrine Mundweiler</h3>
+        
+        <p class="text-green-800 text-base leading-relaxed">
+          Psychopraticienne spécialisée dans l'accompagnement thérapeutique.
+        </p>
+        
+        <span class="inline-block mt-4 text-green-600 font-semibold hover:text-green-800 transition">
+          Visiter le site →
+        </span>
+      </a>
+
+      <!-- Partenaire 2 : APsySE -->
+      <a href="https://www.apsyse.com/" target="_blank" rel="noopener"
+        class="bg-white border border-gray-200 rounded-lg p-6 shadow-md hover:shadow-xl transition duration-300 transform hover:-translate-y-1 flex flex-col items-center text-center">
+        
+        <%= image_tag "apsyse.png",
+          alt: "APsySE - Association de Psychothérapeutes",
+          class: "w-32 h-32 object-contain rounded-full mb-4 shadow-md bg-white p-2" %>
+        
+        <h3 class="text-xl font-semibold text-green-600 mb-2">APsySE</h3>
+        
+        <p class="text-green-800 text-base leading-relaxed">
+          Association de psychothérapeutes spécialisés en Analyse Psycho-Somato-Énergétique.
+        </p>
+        
+        <span class="inline-block mt-4 text-green-600 font-semibold hover:text-green-800 transition">
+          Visiter le site →
+        </span>
+      </a>
+
+    </div>
   </div>
 </section>
 
