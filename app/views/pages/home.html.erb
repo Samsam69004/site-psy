@@ -1,21 +1,21 @@
 <!-- SECTION ACCUEIL AVEC PHOTO DE MAMAN -->
 <section id="accueil" class="min-h-screen flex flex-col justify-center items-center px-4 text-center text-green-900 text-lg leading-relaxed" data-aos="fade-up">
   <h1 class="text-3xl md:text-4xl font-bold text-green-600 uppercase mb-12 font-serif relative after:block after:h-1 after:w-16 after:bg-green-600 after:mx-auto after:mt-2">
-    Bienvenue, je suis Frédérique Granjon
+    Frédérique Granjon, psychopraticienne en thérapie psychocorporelle à Lyon 6
   </h1>
 
   <%= image_tag "granjon.jpg",
-      alt: "Frédérique Granjon, psychothérapeute à Lyon",
-      title: "Frédérique Granjon, psychothérapeute à Lyon",
+      alt: "Frédérique Granjon, psychopraticienne en thérapie psychocorporelle à Lyon 6",
+      title: "Frédérique Granjon, psychopraticienne à Lyon 6",
       class: "w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 lg:w-64 lg:h-64 mx-auto rounded-full shadow-md object-cover transition duration-300 ease-in-out hover:scale-105 hover:shadow-lg" %>
 
   <p class="max-w-2xl mx-auto text-green-800 text-xl md:text-2xl font-sans leading-relaxed mt-6">
-    <strong>Psychopraticienne à Lyon</strong> spécialisée en
-    <strong>thérapie psychocorporelle</strong>, je vous accompagne dans les troubles liés à la
+    <strong>Psychopraticienne à Lyon 6</strong>, je propose une
+    <strong>thérapie psychocorporelle</strong> et vous accompagne dans les troubles liés à la
     <strong>dépression</strong>, au <strong>traumatisme</strong> et au <strong>stress chronique</strong>.
     Mon approche repose sur
     <strong>l’Analyse Psycho Somato Énergétique (APsySE)</strong>, une méthode alliant écoute du corps et
-    libération des émotions.
+    libération des émotions. Les séances ont lieu au cabinet, 11-13 rue Curie à Lyon.
   </p>
 </section>
 
@@ -34,7 +34,7 @@
     <!-- Image -->
     <div class="bg-white p-6 rounded-lg">
       <%= image_tag "peinture-fond.jpg",
-        alt: "Œuvre artistique symbolisant la thérapie psychocorporelle – Frédérique Granjon, psychothérapeute à Lyon",
+        alt: "Œuvre artistique symbolisant la thérapie psychocorporelle – Frédérique Granjon, psychopraticienne à Lyon",
         class: "w-full rounded-lg object-cover transition duration-300 transform hover:-translate-y-1 hover:shadow-xl" %>
     </div>
 
@@ -362,9 +362,11 @@
       <!-- Profil Psychologue.net -->
       <a href="https://www.psychologue.net/cabinets/frederique-granjon" target="_blank" rel="noopener"
         class="inline-flex items-center gap-4 bg-white border border-gray-200 rounded-lg px-8 py-6 shadow-md hover:shadow-xl transition duration-300 transform hover:-translate-y-1 w-full max-w-2xl">
-        <%= image_tag "profilpsychologuenet.png",
-          alt: "Profil Psychologue.net - Frédérique Granjon",
-          class: "h-20 md:h-24 object-contain flex-shrink-0" %>
+        <span class="h-24 w-32 overflow-hidden flex-shrink-0">
+          <%= image_tag "profilpsychologuenet.png",
+            alt: "Profil Psychologue.net - Frédérique Granjon",
+            class: "h-full w-full object-cover object-center" %>
+        </span>
         <span class="text-green-600 font-semibold text-lg hover:text-green-800 transition">
           Voir mon profil →
         </span>
@@ -373,11 +375,41 @@
       <!-- Profil Resalib -->
       <a href="https://www.resalib.fr/praticien/37941-frederique-granjon-psychopraticien-lyon" target="_blank" rel="noopener"
         class="inline-flex items-center gap-4 bg-white border border-gray-200 rounded-lg px-8 py-6 shadow-md hover:shadow-xl transition duration-300 transform hover:-translate-y-1 w-full max-w-2xl">
-        <%= image_tag "profilresalib.png",
-          alt: "Profil Resalib - Frédérique Granjon",
-          class: "h-20 md:h-24 object-contain flex-shrink-0" %>
+        <span class="h-24 w-32 overflow-hidden flex-shrink-0">
+          <%= image_tag "profilresalib.png",
+            alt: "Profil Resalib - Frédérique Granjon",
+            class: "h-full w-full object-cover object-center" %>
+        </span>
         <span class="text-green-600 font-semibold text-lg hover:text-green-800 transition">
           Voir mon profil →
+        </span>
+      </a>
+
+      <!-- Facebook -->
+      <a href="https://www.facebook.com/share/1EJ3hx5eQS/" target="_blank" rel="noopener"
+        aria-label="Voir la page Facebook de Frédérique Granjon"
+        class="inline-flex items-center gap-4 bg-white border border-gray-200 rounded-lg px-8 py-6 shadow-md hover:shadow-xl transition duration-300 transform hover:-translate-y-1 w-full max-w-2xl">
+        <span class="h-24 w-32 overflow-hidden flex-shrink-0">
+          <%= image_tag "facebook.png",
+            alt: "Facebook - Frédérique Granjon",
+            class: "h-full w-full object-cover object-center" %>
+        </span>
+        <span class="text-green-600 font-semibold text-lg hover:text-green-800 transition">
+          Voir ma page Facebook →
+        </span>
+      </a>
+
+      <!-- LinkedIn -->
+      <a href="https://www.linkedin.com/in/fr%C3%A9d%C3%A9rique-granjon-8a406864/" target="_blank" rel="noopener"
+        aria-label="Voir le profil LinkedIn de Frédérique Granjon"
+        class="inline-flex items-center gap-4 bg-white border border-gray-200 rounded-lg px-8 py-6 shadow-md hover:shadow-xl transition duration-300 transform hover:-translate-y-1 w-full max-w-2xl">
+        <span class="h-24 w-32 overflow-hidden flex-shrink-0">
+          <%= image_tag "linkedin.png",
+            alt: "LinkedIn - Frédérique Granjon",
+            class: "h-full w-full object-cover object-center" %>
+        </span>
+        <span class="text-green-600 font-semibold text-lg hover:text-green-800 transition">
+          Voir mon profil LinkedIn →
         </span>
       </a>
     </div>

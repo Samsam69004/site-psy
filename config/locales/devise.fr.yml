@@ -1,5 +1,0 @@
-fr:
-  devise:
-    sessions:
-      admin_user:
-        signed_in: "Connexion réussie en tant qu’administrateur"

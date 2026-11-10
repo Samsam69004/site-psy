@@ -1,13 +1,12 @@
 Rails.application.routes.draw do
-  devise_for :admin_users, ActiveAdmin::Devise.config
-  ActiveAdmin.routes(self)
-
   # Envoi du formulaire de contact
   resources :contacts, only: [ :new, :create ]
   # Accueil unique (one page dynamique)
   root to: "pages#home"
 
-  # Pages réellement présentes
+  get "blog", to: "blog_posts#index", as: :blog
+  get "blog/:slug", to: "blog_posts#show", as: :blog_post
+
   get "contact", to: "pages#contact"
   get "mentions_legales", to: "pages#mentions_legales"
   get "politique_confidentialite", to: "pages#politique_confidentialite"

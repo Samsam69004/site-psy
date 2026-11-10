@@ -2,6 +2,8 @@ class ContactMailer < ApplicationMailer
   def contact_email(name:, firstname:, email:, subject:, message:)
     @name = name
     @firstname = firstname
+    @email = email
+    @subject = subject
     @message = message
 
     mail(

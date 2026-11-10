@@ -12,4 +12,3 @@ Page.create!(title: "Mon parcours", slug: "parcours", content: "<p>Voici mon par
 Page.create!(title: "Outils", slug: "outils", content: "<p>Mes outils thérapeutiques.</p>")
 Page.create!(title: "Le cabinet", slug: "cabinet", content: "<p>Infos sur le cabinet.</p>")
 Page.create!(title: "Contact", slug: "contact", content: "<p>Formulaire de contact :</p>")
-AdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password') if Rails.env.development?

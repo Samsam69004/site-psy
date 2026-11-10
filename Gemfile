@@ -1,20 +1,18 @@
 source "https://rubygems.org"
 
-ruby "3.2.3"
+ruby "3.4.12"
 
-gem "rails", "~> 7.2.2", ">= 7.2.2.1"
+gem "rails", "~> 8.1.4", ">= 8.1.4.1"
 gem "pg", "~> 1.1"
 gem "puma", ">= 5.0"
 gem "importmap-rails"
 gem "turbo-rails"
 gem "stimulus-rails"
 gem "jbuilder"
-gem "devise"
 gem "nokogiri", "~> 1.15"
 gem "image_processing", "~> 1.2"
 gem "cssbundling-rails"
-gem "activeadmin"
-gem "sassc-rails"
+gem "sprockets-rails"
 gem "actiontext"
 gem "securerandom", "~> 0.4.1", require: false
 gem "bootsnap", require: false

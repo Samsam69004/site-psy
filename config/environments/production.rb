@@ -12,14 +12,10 @@ Rails.application.configure do
   config.consider_all_requests_local = false
   config.action_controller.perform_caching = true
 
-  # Ne pas utiliser SassC : important pour éviter l'erreur
-  config.assets.css_compressor = nil
+  # Assets are compiled during the release/build step, never on a live request.
+  config.assets.compile = false
 
-  # Ne compile pas avec le pipeline si un asset est manquant (on compile tout avec npm build)
-  config.assets.compile = true
-
-  # Serveur de fichiers statiques désactivé (on laisse nginx/heroku s'en charger)
-  # config.public_file_server.enabled = ENV["RAILS_SERVE_STATIC_FILES"].present?
+  config.public_file_server.enabled = ENV["RAILS_SERVE_STATIC_FILES"].present?
 
   # Active Storage
   config.active_storage.service = :local

@@ -3,4 +3,4 @@ User-agent: *
 Disallow: /admin
 Allow: /
 
-Sitemap: https://frederiquegranjon.fr/sitemap.xml
+Sitemap: https://frederiquegranjon.com/sitemap.xml
