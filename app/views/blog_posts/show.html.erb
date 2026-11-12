@@ -5,7 +5,7 @@
   "@type": "Article",
   "headline": @blog_post[:title],
   "description": @blog_post[:description],
-  "image": image_url(@blog_post[:image]),
+  "image": Array(@blog_post[:images] || @blog_post[:image]).map { |image| image_url(image) },
   "url": blog_post_url(@blog_post[:slug]),
   "datePublished": @blog_post[:published_at].iso8601,
   "dateModified": @blog_post[:published_at].iso8601,
@@ -18,30 +18,18 @@
     <div class="rounded-xl bg-white/95 p-6 shadow-xl sm:p-10">
     <p class="text-sm font-semibold uppercase tracking-wider text-green-600"><%= @blog_post[:published_at].strftime("%d/%m/%Y") %></p>
     <h1 class="mt-3 font-serif text-3xl font-bold text-green-800 md:text-5xl"><%= @blog_post[:title] %></h1>
-    <%= image_tag @blog_post[:image],
-      alt: "Illustration de l’APsySE",
-      class: "mx-auto mt-8 max-h-[42rem] w-full rounded-lg object-contain shadow-md" %>
+    <div class="mt-8 space-y-6">
+      <% Array(@blog_post[:images] || @blog_post[:image]).each_with_index do |image, index| %>
+        <%= image_tag image,
+          alt: "Illustration #{index + 1} de l’article : #{@blog_post[:title]}",
+          class: "mx-auto max-h-[42rem] w-full rounded-xl object-contain shadow-md" %>
+      <% end %>
+    </div>
 
     <div class="mt-10 space-y-6 text-lg leading-relaxed text-green-800">
-      <p>
-        L’<strong>Analyse Psycho Somato Énergétique</strong> (APsySE) propose une série de mises en situation stimulantes
-        pour faire resurgir des expériences traumatiques anciennes sous forme de sensations, émotions, images, pensées ou souvenirs.
-      </p>
-      <p>
-        Ces expériences sont ensuite verbalisées et analysées dans un but de transformation profonde et de sortie des schémas
-        limitants du passé.
-      </p>
-      <p>
-        Cette démarche peut contribuer à développer un « moi » plus confiant, ouvert à la vie et à l’amour, et à retrouver
-        une bonne énergie vitale.
-      </p>
-      <p>
-        L’APsySE est présentée comme un soutien ponctuel pour traverser une période difficile ou comme un chemin thérapeutique
-        de plus longue durée pour mieux se connaître et comprendre son fonctionnement.
-      </p>
-      <p>
-        Les praticiens de l’APsySE sont certifiés à la suite d’un processus thérapeutique personnel et d’une formation de plusieurs années.
-      </p>
+      <% @blog_post[:paragraphs].each do |paragraph| %>
+        <p><%= paragraph %></p>
+      <% end %>
     </div>
 
     <div class="mt-12 rounded-lg bg-[#f9f9f6] p-8 text-center shadow-md">
